@@ -2,7 +2,7 @@ import { useBreakpoint } from '../hooks/useBreakpoint'
 
 export default function Hero({ c, lang }) {
   const h = c.hero
-  const { isMobile, isTablet } = useBreakpoint()
+  const { isMobile } = useBreakpoint()
 
   const stats = [
     { n: '14', label: lang === 'es' ? 'días' : 'days' },
@@ -14,8 +14,13 @@ export default function Hero({ c, lang }) {
     <section
       id="top"
       style={{
-        background: '#ffffff',
-        borderBottom: '1px solid #e4e4e7',
+        background: '#09090b',
+        backgroundImage: [
+          'radial-gradient(ellipse 80% 50% at 50% -10%, rgba(113,107,182,0.18) 0%, transparent 70%)',
+          'radial-gradient(circle at 50% 50%, rgba(113,107,182,0.04) 1px, transparent 1px)',
+        ].join(', '),
+        backgroundSize: 'auto, 28px 28px',
+        borderBottom: '1px solid #27272a',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -24,37 +29,59 @@ export default function Hero({ c, lang }) {
       }}
     >
       <div style={{
-        maxWidth: '72rem',
+        maxWidth: '56rem',
         margin: '0 auto',
         width: '100%',
-        padding: isMobile ? '3.5rem 1.25rem 3rem' : '5rem 1.25rem 4rem',
+        padding: isMobile ? '4rem 1.25rem 3.5rem' : '6rem 2rem 5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        textAlign: 'center',
       }}>
 
-        {/* Kicker */}
-        <p style={{
-          fontFamily: "'DM Mono', monospace",
-          fontSize: '0.65rem',
-          letterSpacing: '0.2em',
-          textTransform: 'uppercase',
-          color: '#716bb6',
-          margin: '0 0 1.5rem 0',
+        {/* Badge pill */}
+        <div style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.5rem',
+          border: '1px solid rgba(113,107,182,0.4)',
+          borderRadius: '999px',
+          padding: '0.35rem 1rem',
+          marginBottom: '2rem',
+          background: 'rgba(113,107,182,0.08)',
         }}>
-          {h.kicker}
-        </p>
+          <span style={{
+            display: 'inline-block',
+            width: '6px',
+            height: '6px',
+            borderRadius: '50%',
+            background: '#716bb6',
+            flexShrink: 0,
+          }} />
+          <span style={{
+            fontFamily: "'DM Mono', monospace",
+            fontSize: '0.65rem',
+            letterSpacing: '0.15em',
+            textTransform: 'uppercase',
+            color: '#a78bfa',
+          }}>
+            Mosaico™ · 14 {lang === 'es' ? 'días' : 'days'} · {lang === 'es' ? 'Precio Fijo' : 'Fixed Price'}
+          </span>
+        </div>
 
         {/* Headline */}
         <h1 style={{
           fontFamily: "'Inter', sans-serif",
-          fontSize: isMobile ? '2rem' : isTablet ? '2.5rem' : 'clamp(2.25rem, 4vw, 3.5rem)',
+          fontSize: isMobile ? '2.125rem' : 'clamp(2.25rem, 4vw, 3.5rem)',
           fontWeight: 800,
-          color: '#18181b',
-          lineHeight: 1.1,
+          color: '#fafafa',
+          lineHeight: 1.12,
           letterSpacing: '-0.03em',
           margin: '0 0 1.5rem 0',
-          maxWidth: '22ch',
+          maxWidth: '26ch',
         }}>
           {h.headline[0]}{' '}
-          <span style={{ color: '#716bb6' }}>{h.headline[1]}</span>
+          <span style={{ color: '#a78bfa' }}>{h.headline[1]}</span>
         </h1>
 
         {/* Subtext */}
@@ -62,9 +89,9 @@ export default function Hero({ c, lang }) {
           fontFamily: "'Inter', sans-serif",
           fontSize: isMobile ? '0.9375rem' : '1.0625rem',
           color: '#71717a',
-          lineHeight: 1.7,
+          lineHeight: 1.75,
           margin: '0 0 2.5rem 0',
-          maxWidth: '52ch',
+          maxWidth: '46ch',
         }}>
           {h.sub}
         </p>
@@ -74,7 +101,9 @@ export default function Hero({ c, lang }) {
           display: 'flex',
           flexDirection: isMobile ? 'column' : 'row',
           gap: '0.75rem',
-          marginBottom: '3.5rem',
+          alignItems: 'center',
+          width: isMobile ? '100%' : 'auto',
+          marginBottom: '3rem',
         }}>
           <a
             href="#contacto"
@@ -84,15 +113,17 @@ export default function Hero({ c, lang }) {
               fontWeight: 600,
               color: '#fff',
               background: '#716bb6',
-              padding: '0.875rem 1.5rem',
+              padding: '0.875rem 1.75rem',
               borderRadius: '5px',
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
               textDecoration: 'none',
               transition: 'background 0.15s, box-shadow 0.15s',
+              width: isMobile ? '100%' : 'auto',
+              whiteSpace: 'nowrap',
             }}
-            onMouseEnter={e => { e.currentTarget.style.background = '#5a55a0'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(113,107,182,0.35)' }}
+            onMouseEnter={e => { e.currentTarget.style.background = '#5a55a0'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(113,107,182,0.45)' }}
             onMouseLeave={e => { e.currentTarget.style.background = '#716bb6'; e.currentTarget.style.boxShadow = 'none' }}
           >
             {h.ctaPrimary}
@@ -103,18 +134,20 @@ export default function Hero({ c, lang }) {
               fontFamily: "'Inter', sans-serif",
               fontSize: '0.875rem',
               fontWeight: 500,
-              color: '#52525b',
+              color: '#a1a1aa',
               padding: '0.875rem 1.5rem',
               borderRadius: '5px',
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
               textDecoration: 'none',
-              border: '1px solid #d4d4d8',
-              transition: 'border-color 0.15s, color 0.15s, box-shadow 0.15s',
+              border: '1px solid #3f3f46',
+              transition: 'border-color 0.15s, color 0.15s',
+              width: isMobile ? '100%' : 'auto',
+              whiteSpace: 'nowrap',
             }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = '#716bb6'; e.currentTarget.style.color = '#716bb6'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)' }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = '#d4d4d8'; e.currentTarget.style.color = '#52525b'; e.currentTarget.style.boxShadow = 'none' }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = '#716bb6'; e.currentTarget.style.color = '#fff' }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = '#3f3f46'; e.currentTarget.style.color = '#a1a1aa' }}
           >
             {h.ctaSecondary}
           </a>
@@ -122,20 +155,31 @@ export default function Hero({ c, lang }) {
 
         {/* Stats row */}
         <div style={{
-          borderTop: '1px solid #e4e4e7',
+          width: '100%',
+          borderTop: '1px solid #27272a',
           paddingTop: '2rem',
           display: 'grid',
-          gridTemplateColumns: isMobile ? 'repeat(3, 1fr)' : 'repeat(3, max-content)',
-          gap: isMobile ? '1rem' : '4rem',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '1rem',
         }}>
-          {stats.map(s => (
-            <div key={s.n}>
+          {stats.map((s, i) => (
+            <div
+              key={s.n}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '0.375rem',
+                paddingRight: i < 2 ? '1rem' : 0,
+                borderRight: i < 2 ? '1px solid #27272a' : 'none',
+              }}
+            >
               <p style={{
                 fontFamily: "'DM Mono', monospace",
-                fontSize: isMobile ? '1.25rem' : '1.75rem',
+                fontSize: isMobile ? '1.375rem' : '1.875rem',
                 fontWeight: 500,
-                color: '#716bb6',
-                margin: '0 0 0.25rem 0',
+                color: '#a78bfa',
+                margin: 0,
                 lineHeight: 1,
               }}>
                 {s.n}
@@ -143,9 +187,9 @@ export default function Hero({ c, lang }) {
               <p style={{
                 fontFamily: "'DM Mono', monospace",
                 fontSize: '0.6rem',
-                letterSpacing: '0.12em',
+                letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                color: '#a1a1aa',
+                color: '#52525b',
                 margin: 0,
               }}>
                 {s.label}
