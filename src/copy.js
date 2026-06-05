@@ -1,6 +1,12 @@
 export const copy = {
   es: {
     nav: {
+      links: [
+        { label: 'Nosotros', href: '#nosotros' },
+        { label: 'Mosaico™', href: '#mosaico' },
+        { label: 'Proceso', href: '#fases' },
+        { label: 'Contacto', href: '#contacto' },
+      ],
       cta: 'Solicitar Mosaico™',
     },
     hero: {
@@ -78,6 +84,12 @@ export const copy = {
 
   en: {
     nav: {
+      links: [
+        { label: 'About', href: '#nosotros' },
+        { label: 'Mosaico™', href: '#mosaico' },
+        { label: 'Process', href: '#fases' },
+        { label: 'Contact', href: '#contacto' },
+      ],
       cta: 'Get the Mosaico™',
     },
     hero: {
