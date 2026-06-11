@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { copy } from './copy'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
@@ -12,6 +12,10 @@ import './index.css'
 export default function App() {
   const [lang, setLang] = useState('es')
   const c = copy[lang]
+
+  useEffect(() => {
+    document.title = c.pageTitle
+  }, [lang])
 
   return (
     <div className="min-h-screen">
