@@ -15,6 +15,18 @@ export default function App() {
 
   useEffect(() => {
     document.title = c.pageTitle
+    document.documentElement.lang = lang
+
+    const setMeta = (sel, val) => {
+      const el = document.querySelector(sel)
+      if (el) el.setAttribute(el.hasAttribute('content') ? 'content' : 'content', val)
+    }
+
+    setMeta('meta[name="description"]', c.metaDescription)
+    setMeta('meta[property="og:title"]', c.pageTitle)
+    setMeta('meta[property="og:description"]', c.metaDescription)
+    setMeta('meta[name="twitter:title"]', c.pageTitle)
+    setMeta('meta[name="twitter:description"]', c.metaDescription)
   }, [lang])
 
   return (

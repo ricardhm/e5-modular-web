@@ -80,6 +80,7 @@ export const copy = {
       successSub: 'Evaluaremos su caso y le contactaremos pronto.',
     },
     pageTitle: 'E5 Modular — Diagnóstico de operaciones en 14 días para empresas en LATAM',
+    metaDescription: 'En 14 días, con los datos que ya tienen, le decimos exactamente cuánto está perdiendo su empresa — y por qué. Sin implementaciones largas. Precio fijo.',
     footer: {
       tagline: 'En 14 días, con los datos que tienen, le decimos exactamente cuánto están perdiendo — y por qué.',
       rights: '© 2026 E5 Modular. Todos los derechos reservados.',
@@ -167,6 +168,7 @@ export const copy = {
       successSub: 'We\'ll evaluate your case and be in touch soon.',
     },
     pageTitle: 'E5 Modular — Operational diagnostics in 14 days for companies in LATAM',
+    metaDescription: 'In 14 days, with the data you already have, we tell you exactly how much your company is losing — and why. No long implementations. Fixed price.',
     footer: {
       tagline: 'In 14 days, with the data you have, we tell you exactly how much you\'re losing — and why.',
       rights: '© 2026 E5 Modular. All rights reserved.',
