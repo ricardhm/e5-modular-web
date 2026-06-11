@@ -71,7 +71,7 @@ export default function Manifesto({ c }) {
 
           {/* Right: body */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            {[m.p1, m.p2, m.p3].map((p, i) => (
+            {[m.p1, m.p2, m.p3].filter(Boolean).map((p, i) => (
               <p key={i} style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: isMobile ? '0.9375rem' : '1.0625rem',
@@ -130,7 +130,7 @@ export default function Manifesto({ c }) {
           gap: '0.5rem',
           flexWrap: 'wrap',
         }}>
-          {['McKinsey', 'Meta', 'Gensler', 'Fortune 500'].map(tag => (
+          {['McKinsey', 'Meta', 'Experian', 'Fortune 500'].map(tag => (
             <span key={tag} style={{
               fontFamily: "'DM Mono', monospace",
               fontSize: '0.65rem',

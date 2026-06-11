@@ -6,8 +6,8 @@ export default function Hero({ c, lang }) {
 
   const stats = [
     { n: '14', label: lang === 'es' ? 'días' : 'days' },
-    { n: '$3K–$5K', label: lang === 'es' ? 'precio fijo' : 'fixed price' },
-    { n: '2', label: lang === 'es' ? 'acciones ejecutables' : 'executable actions' },
+    { n: '1', label: lang === 'es' ? 'número' : 'number' },
+    { n: '3', label: lang === 'es' ? 'tácticas' : 'tactics' },
   ]
 
   return (

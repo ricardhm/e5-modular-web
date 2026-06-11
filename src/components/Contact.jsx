@@ -69,7 +69,7 @@ export default function Contact({ c }) {
             </p>
 
             <div style={{ borderTop: '1px solid #e4e4e7', paddingTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-              {['14 días', '$3,000–$5,000', ct.note].map(item => (
+              {ct.bullets.map(item => (
                 <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                   <span style={{ color: '#716bb6', fontSize: '0.875rem', marginTop: '1px', flexShrink: 0 }}>✓</span>
                   <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.875rem', color: '#71717a', lineHeight: 1.5 }}>

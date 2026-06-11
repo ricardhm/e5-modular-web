@@ -25,6 +25,18 @@ export default function Mosaico({ c }) {
           }}>
             {m.label}
           </p>
+          {m.subtitle && (
+            <p style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: isMobile ? '1rem' : '1.125rem',
+              fontWeight: 600,
+              color: '#716bb6',
+              lineHeight: 1.4,
+              marginBottom: '0.5rem',
+            }}>
+              {m.subtitle}
+            </p>
+          )}
           <h2 style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: isMobile ? '1.5rem' : 'clamp(1.5rem, 2.5vw, 2rem)',
