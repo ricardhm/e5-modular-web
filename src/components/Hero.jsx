@@ -14,6 +14,8 @@ export default function Hero({ c, lang }) {
     <section
       id="top"
       style={{
+        position: 'relative',
+        overflow: 'hidden',
         background: '#09090b',
         backgroundImage: [
           'radial-gradient(ellipse 80% 50% at 50% -10%, rgba(113,107,182,0.18) 0%, transparent 70%)',
@@ -28,6 +30,23 @@ export default function Hero({ c, lang }) {
         paddingTop: '60px',
       }}
     >
+      <img
+        src="/E5_figures.png"
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          right: isMobile ? '-20%' : '-5%',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: isMobile ? '90%' : '52%',
+          maxWidth: '720px',
+          opacity: 0.55,
+          filter: 'invert(1) hue-rotate(180deg)',
+          mixBlendMode: 'screen',
+          pointerEvents: 'none',
+          userSelect: 'none',
+        }}
+      />
       <div style={{
         maxWidth: '56rem',
         margin: '0 auto',

@@ -6,10 +6,27 @@ export default function Manifesto({ c }) {
 
   return (
     <section id="nosotros" style={{
+      position: 'relative',
+      overflow: 'hidden',
       background: '#ffffff',
       borderBottom: '1px solid #e4e4e7',
       padding: isMobile ? '4rem 0' : '6rem 0',
     }}>
+      <img
+        src="/E5_figures.png"
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          left: isMobile ? '-20%' : '-8%',
+          bottom: '-15%',
+          width: isMobile ? '80%' : '45%',
+          maxWidth: '600px',
+          opacity: 0.06,
+          transform: 'scaleX(-1)',
+          pointerEvents: 'none',
+          userSelect: 'none',
+        }}
+      />
       <div style={{ maxWidth: '72rem', margin: '0 auto', padding: '0 1.25rem' }}>
 
         <p style={{

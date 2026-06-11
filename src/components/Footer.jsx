@@ -6,10 +6,27 @@ export default function Footer({ c }) {
 
   return (
     <footer style={{
+      position: 'relative',
+      overflow: 'hidden',
       background: '#ffffff',
       borderTop: '1px solid #e4e4e7',
       padding: isMobile ? '2.5rem 0' : '3rem 0',
     }}>
+      <img
+        src="/E5_figures.png"
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          right: isMobile ? '-20%' : '-4%',
+          bottom: '-30%',
+          width: isMobile ? '70%' : '32%',
+          maxWidth: '420px',
+          opacity: 0.12,
+          transform: 'scaleX(-1)',
+          pointerEvents: 'none',
+          userSelect: 'none',
+        }}
+      />
       <div style={{
         maxWidth: '72rem',
         margin: '0 auto',

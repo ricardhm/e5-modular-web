@@ -8,10 +8,26 @@ export default function Phases({ c }) {
 
   return (
     <section id="fases" style={{
+      position: 'relative',
+      overflow: 'hidden',
       background: '#ffffff',
       borderBottom: '1px solid #e4e4e7',
       padding: isMobile ? '4rem 0' : '6rem 0',
     }}>
+      <img
+        src="/E5_figures.png"
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          right: isMobile ? '-15%' : '-6%',
+          top: '-10%',
+          width: isMobile ? '75%' : '40%',
+          maxWidth: '560px',
+          opacity: 0.15,
+          pointerEvents: 'none',
+          userSelect: 'none',
+        }}
+      />
       <div style={{ maxWidth: '72rem', margin: '0 auto', padding: '0 1.25rem' }}>
 
         {/* Header */}
