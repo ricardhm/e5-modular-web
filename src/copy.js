@@ -76,6 +76,8 @@ export const copy = {
       emailPlaceholder: 'Correo corporativo',
       companyPlaceholder: 'Empresa',
       submit: 'Solicitar el Mosaico™',
+      successTitle: 'Recibido.',
+      successSub: 'Evaluaremos su caso y le contactaremos pronto.',
     },
     footer: {
       tagline: 'En 14 días, con los datos que tienen, le decimos exactamente cuánto están perdiendo — y por qué.',
@@ -160,6 +162,8 @@ export const copy = {
       emailPlaceholder: 'Corporate email',
       companyPlaceholder: 'Company',
       submit: 'Get the Mosaico™',
+      successTitle: 'Received.',
+      successSub: 'We\'ll evaluate your case and be in touch soon.',
     },
     footer: {
       tagline: 'In 14 days, with the data you have, we tell you exactly how much you\'re losing — and why.',

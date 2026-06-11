@@ -1,11 +1,10 @@
-import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 
 export default function Contact({ c }) {
   const ct = c.contact
   const { isMobile } = useBreakpoint()
-  const [form, setForm] = useState({ name: '', email: '', company: '', message: '' })
-  const [sent, setSent] = useState(false)
+  const [state, handleSubmit] = useForm('mkoaqnqq')
 
   const inputStyle = {
     fontFamily: "'Inter', sans-serif",
@@ -19,6 +18,11 @@ export default function Contact({ c }) {
     outline: 'none',
     transition: 'border-color 0.15s, background 0.15s, box-shadow 0.15s',
     boxSizing: 'border-box',
+  }
+
+  const focusHandlers = {
+    onFocus: e => { e.target.style.borderColor = '#716bb6'; e.target.style.background = '#fff'; e.target.style.boxShadow = '0 0 0 3px rgba(113,107,182,0.12)' },
+    onBlur:  e => { e.target.style.borderColor = '#e4e4e7'; e.target.style.background = '#f9f9fb'; e.target.style.boxShadow = 'none' },
   }
 
   return (
@@ -81,7 +85,7 @@ export default function Contact({ c }) {
           </div>
 
           {/* Right: form */}
-          {sent ? (
+          {state.succeeded ? (
             <div style={{
               background: '#ffffff',
               border: '1px solid #e4e4e7',
@@ -94,52 +98,73 @@ export default function Contact({ c }) {
             }}>
               <span style={{ fontFamily: "'DM Mono', monospace", fontSize: '2rem', color: '#716bb6' }}>✓</span>
               <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.125rem', fontWeight: 700, color: '#18181b', margin: 0 }}>
-                Recibido.
+                {ct.successTitle}
               </p>
               <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.875rem', color: '#71717a', margin: 0 }}>
-                Le respondemos en menos de 24 horas.
+                {ct.successSub}
               </p>
             </div>
           ) : (
-            <form onSubmit={e => { e.preventDefault(); setSent(true) }}
+            <form onSubmit={handleSubmit}
               style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
               <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '0.875rem' }}>
-                <input required type="text" placeholder={ct.namePlaceholder} value={form.name}
-                  onChange={e => setForm({ ...form, name: e.target.value })} style={inputStyle}
-                  onFocus={e => { e.target.style.borderColor = '#716bb6'; e.target.style.background = '#fff'; e.target.style.boxShadow = '0 0 0 3px rgba(113,107,182,0.12)' }}
-                  onBlur={e => { e.target.style.borderColor = '#e4e4e7'; e.target.style.background = '#f9f9fb'; e.target.style.boxShadow = 'none' }} />
-                <input required type="email" placeholder={ct.emailPlaceholder} value={form.email}
-                  onChange={e => setForm({ ...form, email: e.target.value })} style={inputStyle}
-                  onFocus={e => { e.target.style.borderColor = '#716bb6'; e.target.style.background = '#fff'; e.target.style.boxShadow = '0 0 0 3px rgba(113,107,182,0.12)' }}
-                  onBlur={e => { e.target.style.borderColor = '#e4e4e7'; e.target.style.background = '#f9f9fb'; e.target.style.boxShadow = 'none' }} />
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  placeholder={ct.namePlaceholder}
+                  style={inputStyle}
+                  {...focusHandlers}
+                />
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  placeholder={ct.emailPlaceholder}
+                  style={inputStyle}
+                  {...focusHandlers}
+                />
               </div>
-              <input type="text" placeholder={ct.companyPlaceholder} value={form.company}
-                onChange={e => setForm({ ...form, company: e.target.value })} style={inputStyle}
-                onFocus={e => { e.target.style.borderColor = '#716bb6'; e.target.style.background = '#fff'; e.target.style.boxShadow = '0 0 0 3px rgba(113,107,182,0.12)' }}
-                onBlur={e => { e.target.style.borderColor = '#e4e4e7'; e.target.style.background = '#f9f9fb'; e.target.style.boxShadow = 'none' }} />
-              <textarea required rows={5} placeholder={ct.question} value={form.message}
-                onChange={e => setForm({ ...form, message: e.target.value })}
+              <ValidationError field="email" errors={state.errors}
+                style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.75rem', color: '#ef4444' }} />
+              <input
+                type="text"
+                name="company"
+                placeholder={ct.companyPlaceholder}
+                style={inputStyle}
+                {...focusHandlers}
+              />
+              <textarea
+                required
+                rows={5}
+                name="message"
+                placeholder={ct.question}
                 style={{ ...inputStyle, resize: 'none' }}
-                onFocus={e => { e.target.style.borderColor = '#716bb6'; e.target.style.background = '#fff'; e.target.style.boxShadow = '0 0 0 3px rgba(113,107,182,0.12)' }}
-                onBlur={e => { e.target.style.borderColor = '#e4e4e7'; e.target.style.background = '#f9f9fb'; e.target.style.boxShadow = 'none' }} />
-              <button type="submit" style={{
-                fontFamily: "'Inter', sans-serif",
-                fontSize: '0.875rem',
-                fontWeight: 600,
-                color: '#fff',
-                background: '#716bb6',
-                border: 'none',
-                borderRadius: '5px',
-                padding: '0.875rem 1.75rem',
-                cursor: 'pointer',
-                alignSelf: isMobile ? 'stretch' : 'flex-start',
-                transition: 'background 0.15s, box-shadow 0.15s',
-                marginTop: '0.25rem',
-              }}
-                onMouseEnter={e => { e.currentTarget.style.background = '#5a55a0'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(113,107,182,0.35)' }}
-                onMouseLeave={e => { e.currentTarget.style.background = '#716bb6'; e.currentTarget.style.boxShadow = 'none' }}
+                {...focusHandlers}
+              />
+              <ValidationError field="message" errors={state.errors}
+                style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.75rem', color: '#ef4444' }} />
+              <button
+                type="submit"
+                disabled={state.submitting}
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: '0.875rem',
+                  fontWeight: 600,
+                  color: '#fff',
+                  background: state.submitting ? '#a8a4d4' : '#716bb6',
+                  border: 'none',
+                  borderRadius: '5px',
+                  padding: '0.875rem 1.75rem',
+                  cursor: state.submitting ? 'not-allowed' : 'pointer',
+                  alignSelf: isMobile ? 'stretch' : 'flex-start',
+                  transition: 'background 0.15s, box-shadow 0.15s',
+                  marginTop: '0.25rem',
+                }}
+                onMouseEnter={e => { if (!state.submitting) { e.currentTarget.style.background = '#5a55a0'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(113,107,182,0.35)' } }}
+                onMouseLeave={e => { e.currentTarget.style.background = state.submitting ? '#a8a4d4' : '#716bb6'; e.currentTarget.style.boxShadow = 'none' }}
               >
-                {ct.submit}
+                {state.submitting ? '...' : ct.submit}
               </button>
             </form>
           )}
