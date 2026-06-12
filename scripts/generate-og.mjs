@@ -80,7 +80,7 @@ const svg = `
   <!-- URL -->
   <text x="1120" y="596" font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
     font-size="14" font-weight="400" fill="#3f3f46" text-anchor="end" letter-spacing="0.5">
-    e5-modular-web.vercel.app
+    e5modular.com
   </text>
 </svg>
 `
