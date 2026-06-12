@@ -5,6 +5,7 @@ export const copy = {
         { label: 'Nosotros', href: '#nosotros' },
         { label: 'Mosaico™', href: '#mosaico' },
         { label: 'Proceso', href: '#fases' },
+        { label: 'FAQ', href: '#faq' },
         { label: 'Contacto', href: '#contacto' },
       ],
       cta: 'Solicitar Mosaico™',
@@ -20,7 +21,7 @@ export const copy = {
       label: 'Quiénes somos',
       title: 'Nosotros también estuvimos ahí.',
       p1: 'Durante años, trabajamos desde adentro de las firmas que tenían las mejores herramientas del mundo — McKinsey, Meta, Experian. Vimos cómo se diseñan los flujos de información que controlan los ingresos de las organizaciones más complejas del mercado.',
-      p2: 'Pero también vimos la falla estructural de la consultoría tradicional. Las grandes metodologías y los sistemas de inteligencia de negocios están diseñados para corporaciones con presupuestos infinitos y años de sobra para implementar software.',
+      p2: 'Pero también vimos la falla estructural de la consultoría tradicional. Las grandes metodologías y los sistemas de inteligencia de negocios están diseñados para corporaciones con presupuestos infinitos y años de sobra para implementar software. Hoy, esa falla tiene un nombre nuevo: «transformación con IA» — otro proyecto de 18 meses, otra plataforma, otro dashboard. Nosotros usamos IA para lo contrario: para que usted no necesite ningún proyecto antes de tener su número.',
       p3: 'Las empresas medianas en LATAM tienen los mismos problemas operacionales — y la misma urgencia de resolverlos. Lo que no tienen es tiempo ni disposición para un engagement de 18 meses que entrega un reporte al final. E5 existe para eso.',
       p4: 'En Centroamérica y LATAM, las reglas son distintas. Las empresas tienen la misma complejidad operativa y los mismos problemas de fuga de margen que un Fortune 500, pero no tienen el lujo de esperar 6 o 12 meses por un reporte teórico. Necesitan una intervención diseñada específicamente para su escala, su velocidad, y su realidad de datos.',
       p4Bold: 'Con lo que ya tienen hoy.',
@@ -31,6 +32,10 @@ export const copy = {
       subtitle: 'Mosaico™: Lo que su operación ya sabe — y usted todavía no.',
       title: 'Ponga un espejo frente a su operación en 14 días. Con la información que ya tiene hoy.',
       intro: 'El diagnóstico integral Mosaico™ es una intervención clínica de dos semanas sobre sus sistemas actuales. No requerimos datos nuevos, servidores nuevos ni cambios de infraestructura. Mapeamos con precisión quirúrgica las tres brechas donde la intuición le está costando dinero hoy:',
+      aiSection: {
+        title: 'Lo que hace posible los 14 días',
+        body: 'Usamos modelos de IA y análisis estadístico para leer años de datos operativos en días — el trabajo que a un equipo tradicional le tomaría meses. La tecnología acelera la lectura. El criterio de qué buscar, y qué hacer con lo que aparece, es nuestro.',
+      },
       gaps: [
         {
           number: '01',
@@ -57,10 +62,11 @@ export const copy = {
       title: 'El Día 14 Es Donde Empieza el Trabajo Real.',
       intro: 'Para el día 14, usted tiene un número. Pero el número es la parte fácil. Lo difícil es lo que ese número revela: que su organización lleva tiempo decidiendo con información incompleta. Eso no se arregla con un reporte. Es un problema de sofisticación organizacional.',
       intro2: 'El Mosaico™ es la entrada a un arco de cinco fases. Usted avanza al ritmo que su organización necesita.',
+      aiPrinciple: 'La IA entra a su operación cuando el número la justifica — no antes.',
       items: [
         { phase: 'Examine', tag: 'Mosaico™ Assessment · 14 días', desc: 'Ve exactamente cuánto está perdiendo y dónde.' },
         { phase: 'Engineer', tag: '4–6 semanas', desc: 'Diseñamos la intervención sobre la brecha más cara que el diagnóstico expuso.' },
-        { phase: 'Execute', tag: '3–6 meses', desc: 'Implementamos. Su equipo ve los efectos en el P&L, no en un dashboard.' },
+        { phase: 'Execute', tag: '3–6 meses', desc: 'Implementamos. Cuando la brecha lo justifica, la solución incluye IA construida dentro de su operación: automatización de procesos, alertas predictivas de retención de cuentas, asistentes internos sobre sus propios datos. Su equipo ve los efectos en el P&L, no en un dashboard.' },
         { phase: 'Elevate', tag: 'Continuo', desc: 'Rediseñamos cómo decide la organización, no solo qué decide.' },
         { phase: 'Evolve', tag: 'Advisory', desc: 'Su equipo opera con autonomía. Nosotros entramos solo en momentos estratégicos.' },
       ],
@@ -79,6 +85,39 @@ export const copy = {
       successTitle: 'Recibido.',
       successSub: 'Evaluaremos su caso y le contactaremos pronto.',
     },
+    faq: {
+      label: 'Preguntas frecuentes',
+      items: [
+        {
+          q: '¿Cómo puedo saber exactamente dónde está perdiendo dinero mi empresa?',
+          a: 'La mayoría de las empresas ya tienen esa respuesta en sus datos — pero no tienen el método para verla. En 14 días, usando únicamente la información que su empresa ya registra (facturación, operaciones, cuentas, costos), le decimos con precisión quirúrgica en qué canal, producto o sucursal se está fugando el margen — y cuánto.',
+        },
+        {
+          q: '¿Necesito implementar nuevo software o cambiar mi infraestructura para el diagnóstico?',
+          a: 'No. El Mosaico™ trabaja sobre sus sistemas actuales. No requerimos migraciones, plataformas nuevas ni cambios de infraestructura. Si su empresa ya registra datos operativos — y casi todas lo hacen — tenemos lo que necesitamos para empezar.',
+        },
+        {
+          q: '¿Cuánto tiempo tarda un diagnóstico operacional con E5?',
+          a: '14 días exactos. Al final de ese período, su equipo recibe un número exacto de cuánto está perdiendo por canal, producto y sucursal — y tres tácticas listas para ejecutarse al día siguiente del diagnóstico. No un reporte de 80 páginas. Un número y un plan.',
+        },
+        {
+          q: '¿Usan inteligencia artificial en el diagnóstico?',
+          a: 'Sí. Usamos modelos de IA y análisis estadístico para leer años de datos operativos en días — trabajo que a un equipo tradicional le tomaría meses. Eso es lo que hace posible el diagnóstico en 14 días a precio fijo. La tecnología acelera la lectura. El criterio de qué buscar, y qué hacer con lo que aparece, es nuestro.',
+        },
+        {
+          q: '¿Pueden implementar soluciones de inteligencia artificial en mi empresa?',
+          a: 'Sí, cuando el diagnóstico lo justifica. En la fase de implementación, y solo cuando la brecha identificada lo amerita, construimos IA dentro de su operación: automatización de procesos, alertas predictivas de retención de cuentas, asistentes internos sobre sus propios datos. La IA entra a su operación cuando el número la justifica — no antes, y nunca como un fin en sí mismo.',
+        },
+        {
+          q: '¿En qué se diferencia E5 de una consultoría tradicional o de un proyecto de transformación con IA?',
+          a: 'Las consultorías tradicionales y los proyectos de transformación con IA están diseñados para corporaciones con presupuestos de millones y 12 a 18 meses disponibles. Las empresas medianas en LATAM tienen los mismos problemas operativos — pero no ese tiempo ni esa holgura. E5 existe para ese mercado: diagnóstico en 14 días, precio fijo, sin implementaciones largas, con los datos que ya tiene. El resultado no es un dashboard ni una plataforma — es un número exacto y un plan de recuperación de margen.',
+        },
+        {
+          q: '¿Con qué tipo de empresas trabajan?',
+          a: 'Trabajamos con directores generales y equipos de operaciones en empresas de $5M a $50M de ingresos en Costa Rica y Centroamérica. Nuestros sectores más frecuentes son retail, educación corporativa, hospitalidad y salud — aunque el diagnóstico aplica a cualquier empresa con datos operativos registrados y un problema de margen no resuelto.',
+        },
+      ],
+    },
     pageTitle: 'E5 Modular — Diagnóstico de operaciones en 14 días',
     metaDescription: 'En 14 días, le decimos exactamente cuánto está perdiendo su empresa y por qué. Sin implementaciones largas. Precio fijo.',
     footer: {
@@ -96,6 +135,7 @@ export const copy = {
         { label: 'About', href: '#nosotros' },
         { label: 'Mosaico™', href: '#mosaico' },
         { label: 'Process', href: '#fases' },
+        { label: 'FAQ', href: '#faq' },
         { label: 'Contact', href: '#contacto' },
       ],
       cta: 'Get the Mosaico™',
@@ -111,7 +151,7 @@ export const copy = {
       label: 'Who We Are',
       title: 'We\'ve Been There Too.',
       p1: 'During years inside the firms with the best tools in the world — McKinsey, Meta, Experian — we watched how data flows control revenue at the most complex organizations.',
-      p2: 'But we also saw the structural failure of traditional consulting. The best methodologies and business intelligence systems are designed for corporations with infinite budgets and years to spare implementing software.',
+      p2: 'But we also saw the structural failure of traditional consulting. The best methodologies and business intelligence systems are designed for corporations with infinite budgets and years to spare implementing software. Today, that failure has a new name: «AI transformation» — another 18-month project, another platform, another dashboard. We use AI for the opposite: so you don\'t need any project before you have your number.',
       p3: '',
       p4: 'In Central America and LATAM, the rules are different. Companies have the same operational complexity and the same margin leak problems as a Fortune 500, but they don\'t have the luxury of waiting 6 or 12 months for a theoretical report. They need an intervention designed specifically for their scale, their speed, and their data reality.',
       p4Bold: 'With what they already have today.',
@@ -122,6 +162,10 @@ export const copy = {
       subtitle: 'Mosaico™: What Your Operation Already Knows — And You Don\'t Yet.',
       title: 'Hold a Mirror to Your Operation in 14 Days. With the Information You Already Have.',
       intro: 'The Mosaico™ assessment is a clinical two-week intervention on your existing systems. We don\'t require new data, new servers, or infrastructure changes. We map with surgical precision the three gaps where intuition is costing you money today:',
+      aiSection: {
+        title: 'What Makes 14 Days Possible',
+        body: 'We use AI models and statistical analysis to read years of operational data in days — work that would take a traditional team months. The technology accelerates the reading. The judgment of what to look for, and what to do with what surfaces, is ours.',
+      },
       gaps: [
         {
           number: '01',
@@ -148,10 +192,11 @@ export const copy = {
       title: 'Day 14 Is Where the Real Work Begins.',
       intro: 'By day 14, you have a number. But the number is the easy part. The hard part is what that number reveals: that your organization has been making decisions with incomplete information for a while. That doesn\'t get fixed with a report. It\'s an organizational sophistication problem.',
       intro2: 'The Mosaico™ is the entry to a five-phase arc. You move at the pace your organization needs.',
+      aiPrinciple: 'AI enters your operation when the number justifies it — not before.',
       items: [
         { phase: 'Examine', tag: 'Mosaico™ Assessment · 14 days', desc: 'You see exactly how much you\'re losing and where.' },
         { phase: 'Engineer', tag: '4–6 weeks', desc: 'We design the intervention targeting the most expensive gap the diagnostic exposed.' },
-        { phase: 'Execute', tag: '3–6 months', desc: 'We implement. Your team sees the effects in the P&L, not in a dashboard.' },
+        { phase: 'Execute', tag: '3–6 months', desc: 'We implement. When the gap justifies it, the solution includes AI built into your operation: process automation, predictive account-retention alerts, internal assistants running on your own data. Your team sees the effects in the P&L, not in a dashboard.' },
         { phase: 'Elevate', tag: 'Ongoing', desc: 'We redesign how the organization makes decisions, not just what it decides.' },
         { phase: 'Evolve', tag: 'Advisory', desc: 'Your team operates autonomously. We come in only at strategic moments.' },
       ],
@@ -169,6 +214,39 @@ export const copy = {
       submit: 'Get the Mosaico™',
       successTitle: 'Received.',
       successSub: 'We\'ll evaluate your case and be in touch soon.',
+    },
+    faq: {
+      label: 'Frequently Asked Questions',
+      items: [
+        {
+          q: 'How can I know exactly where my company is losing money?',
+          a: 'Most companies already have that answer in their data — but they don\'t have the method to see it. In 14 days, using only the information your company already records (billing, operations, accounts, costs), we tell you with surgical precision which channel, product, or location is bleeding margin — and how much.',
+        },
+        {
+          q: 'Do I need to implement new software or change my infrastructure for the diagnostic?',
+          a: 'No. The Mosaico™ works on your existing systems. We don\'t require migrations, new platforms, or infrastructure changes. If your company already records operational data — and almost all do — we have what we need to start.',
+        },
+        {
+          q: 'How long does an operational diagnostic with E5 take?',
+          a: '14 days exactly. At the end of that period, your team receives one exact number — how much you\'re losing by channel, product, and location — and three tactics ready to execute the day after the diagnostic ends. Not an 80-page report. One number and a plan.',
+        },
+        {
+          q: 'Do you use artificial intelligence in the diagnostic?',
+          a: 'Yes. We use AI models and statistical analysis to read years of operational data in days — work that would take a traditional team months. That\'s what makes the 14-day fixed-price diagnostic possible. The technology accelerates the reading. The judgment of what to look for, and what to do with what surfaces, is ours.',
+        },
+        {
+          q: 'Can you implement artificial intelligence solutions in my company?',
+          a: 'Yes, when the diagnostic justifies it. In the implementation phase, and only when the identified gap warrants it, we build AI into your operation: process automation, predictive account-retention alerts, internal assistants running on your own data. AI enters your operation when the number justifies it — not before, and never as an end in itself.',
+        },
+        {
+          q: 'How is E5 different from traditional consulting or an AI transformation project?',
+          a: 'Traditional consulting firms and AI transformation projects are designed for corporations with million-dollar budgets and 12 to 18 months available. Mid-market companies in LATAM have the same operational problems — but not that time or capital. E5 exists for that market: diagnostic in 14 days, fixed price, no long implementations, with the data you already have. The result isn\'t a dashboard or a platform — it\'s one exact number and a margin-recovery plan.',
+        },
+        {
+          q: 'What type of companies do you work with?',
+          a: 'We work with general managers and operations teams at companies with $5M–$50M in revenue in Costa Rica and Central America. Our most frequent sectors are retail, corporate education, hospitality, and health — though the diagnostic applies to any company with recorded operational data and an unresolved margin problem.',
+        },
+      ],
     },
     pageTitle: 'E5 Modular — Operational diagnostic in 14 days',
     metaDescription: 'In 14 days, we tell you exactly how much your company is losing — and why. No long implementations. Fixed price.',

@@ -56,9 +56,21 @@ export default function Phases({ c }) {
           <p style={{ fontFamily: "'Inter', sans-serif", fontSize: isMobile ? '0.9375rem' : '1rem', color: '#71717a', lineHeight: 1.7, marginBottom: '0.75rem' }}>
             {p.intro}
           </p>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: isMobile ? '0.9375rem' : '1rem', color: '#71717a', lineHeight: 1.7, margin: 0 }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: isMobile ? '0.9375rem' : '1rem', color: '#71717a', lineHeight: 1.7, marginBottom: p.aiPrinciple ? '0.75rem' : 0 }}>
             {p.intro2}
           </p>
+          {p.aiPrinciple && (
+            <p style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: isMobile ? '0.875rem' : '0.9375rem',
+              color: '#716bb6',
+              lineHeight: 1.6,
+              fontStyle: 'italic',
+              margin: 0,
+            }}>
+              {p.aiPrinciple}
+            </p>
+          )}
         </div>
 
         {/* Phases grid */}

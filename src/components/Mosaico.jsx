@@ -59,6 +59,38 @@ export default function Mosaico({ c }) {
           </p>
         </div>
 
+        {/* AI method subsection */}
+        {m.aiSection && (
+          <div style={{
+            background: '#ffffff',
+            border: '1px solid #e4e4e7',
+            borderLeft: '3px solid #716bb6',
+            borderRadius: '6px',
+            padding: isMobile ? '1.25rem 1.25rem 1.25rem 1.5rem' : '1.5rem 2rem 1.5rem 1.75rem',
+            marginBottom: '2rem',
+          }}>
+            <p style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: '0.62rem',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#716bb6',
+              marginBottom: '0.5rem',
+            }}>
+              {m.aiSection.title}
+            </p>
+            <p style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: isMobile ? '0.9375rem' : '1rem',
+              color: '#52525b',
+              lineHeight: 1.7,
+              margin: 0,
+            }}>
+              {m.aiSection.body}
+            </p>
+          </div>
+        )}
+
         {/* Bento: 3 gaps */}
         <div style={{
           display: 'grid',
