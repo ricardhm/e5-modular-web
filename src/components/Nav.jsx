@@ -48,12 +48,23 @@ export default function Nav({ lang, setLang, c }) {
         }}>
 
           {/* Logo */}
-          <a href="#top" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+          <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0, textDecoration: 'none' }}>
             <img
               src="/logo_white.png"
-              alt="E5 Modular"
-              style={{ height: isMobile ? '30px' : '36px', width: 'auto' }}
+              alt=""
+              aria-hidden="true"
+              style={{ height: isMobile ? '20px' : '22px', width: 'auto' }}
             />
+            <span style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: isMobile ? '0.875rem' : '0.9375rem',
+              fontWeight: 700,
+              color: '#18181b',
+              letterSpacing: '-0.02em',
+              whiteSpace: 'nowrap',
+            }}>
+              E5 Modular
+            </span>
           </a>
 
           {/* Center links — desktop only */}

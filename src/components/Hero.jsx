@@ -182,10 +182,10 @@ export default function Hero({ c, lang }) {
               </p>
               <p style={{
                 fontFamily: "'DM Mono', monospace",
-                fontSize: '0.6rem',
-                letterSpacing: '0.15em',
+                fontSize: '0.72rem',
+                letterSpacing: '0.12em',
                 textTransform: 'uppercase',
-                color: '#52525b',
+                color: '#a1a1aa',
                 margin: 0,
               }}>
                 {s.label}
