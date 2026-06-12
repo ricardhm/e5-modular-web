@@ -50,15 +50,42 @@ export default function Footer({ c }) {
             {f.tagline}
           </p>
         </div>
-        <p style={{
-          fontFamily: "'DM Mono', monospace",
-          fontSize: '0.62rem',
-          letterSpacing: '0.1em',
-          color: '#a1a1aa',
-          margin: 0,
-        }}>
-          {f.rights}
-        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: isMobile ? 'flex-start' : 'flex-end', gap: '0.75rem' }}>
+          {f.socials && (
+            <div style={{ display: 'flex', gap: '1rem' }}>
+              {f.socials.map(s => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontFamily: "'DM Mono', monospace",
+                    fontSize: '0.62rem',
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                    color: '#71717a',
+                    textDecoration: 'none',
+                    transition: 'color 0.15s',
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.color = '#716bb6' }}
+                  onMouseLeave={e => { e.currentTarget.style.color = '#71717a' }}
+                >
+                  {s.label}
+                </a>
+              ))}
+            </div>
+          )}
+          <p style={{
+            fontFamily: "'DM Mono', monospace",
+            fontSize: '0.62rem',
+            letterSpacing: '0.1em',
+            color: '#a1a1aa',
+            margin: 0,
+          }}>
+            {f.rights}
+          </p>
+        </div>
       </div>
     </footer>
   )

@@ -84,6 +84,9 @@ export const copy = {
     footer: {
       tagline: 'En 14 días, con los datos que tienen, le decimos exactamente cuánto están perdiendo — y por qué.',
       rights: '© 2026 E5 Modular. Todos los derechos reservados.',
+      socials: [
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/company/e5-modular/' },
+      ],
     },
   },
 
@@ -172,6 +175,9 @@ export const copy = {
     footer: {
       tagline: 'In 14 days, with the data you have, we tell you exactly how much you\'re losing — and why.',
       rights: '© 2026 E5 Modular. All rights reserved.',
+      socials: [
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/company/e5-modular/' },
+      ],
     },
   },
 }

@@ -147,29 +147,6 @@ export default function Hero({ c, lang }) {
           >
             {h.ctaPrimary}
           </a>
-          <a
-            href="#mosaico"
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: '0.875rem',
-              fontWeight: 500,
-              color: '#a1a1aa',
-              padding: '0.875rem 1.5rem',
-              borderRadius: '5px',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              textDecoration: 'none',
-              border: '1px solid #3f3f46',
-              transition: 'border-color 0.15s, color 0.15s',
-              width: isMobile ? '100%' : 'auto',
-              whiteSpace: 'nowrap',
-            }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = '#716bb6'; e.currentTarget.style.color = '#fff' }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = '#3f3f46'; e.currentTarget.style.color = '#a1a1aa' }}
-          >
-            {h.ctaSecondary}
-          </a>
         </div>
 
         {/* Stats row */}
